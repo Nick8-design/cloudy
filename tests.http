@@ -1,0 +1,24 @@
+http://localhost:8080/files 
+
+
+
+http://localhost:8080/upload \
+     -F "file=@/home/nick/Desktop/farmer flutter/bird/img4.jpg"
+
+                                                                                   
+
+ http://localhost:8080/upload \
+     -F "file=@/home/nick/Desktop/farmer flutter/bird/img4.jpg"
+                                                                                  
+
+/*
+curl -X POST http://localhost:8080/upload \
+     -F "file=@/home/nick/Desktop/farmer flutter/bird/img6.jpg"
+
+
+/home/nick/Desktop/farmer flutter/bird
+
+curl -X GET http://localhost:8080/files/img4.jpg --output img4.jpg 
+
+
+*/

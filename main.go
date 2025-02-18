@@ -21,8 +21,8 @@ func main(){
 
 	app.Post("/upload",uploadFile)
 	app.Get("/files/:filename",downloadFile)
-	app.Get("files",listFiles)
-	app.Delete("files/:filename",deleteFile)
+	app.Get("/files",listFiles)
+	app.Delete("/files/:filename",deleteFile)
 
 	log.Fatal(app.Listen(":8080"))
 }
@@ -91,14 +91,3 @@ func deleteFile(c *fiber.Ctx) error {
 	return c.JSON(fiber.Map{"message": "File deleted successfully"})
 }
 
-/*
-curl -X POST http://localhost:8080/upload \
-     -F "file=@/home/nick/Desktop/farmer flutter/bird/img4.jpg"
-
-
-/home/nick/Desktop/farmer flutter/bird
-
-curl -X GET http://localhost:8080/files/img4.jpg --output img4.jpg 
-
-
-*/
